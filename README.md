@@ -1,32 +1,41 @@
 # TalkSpace (˶◜ᵕ◝˶) ✨
-¡bienvenido/a personita interesada en los debates en linea! ૮₍ ˃ ⤙ ˂ ₎ა
-*TalkSpace* una plataforma sencilla donde los usuarios pueden conectarse, compartir publicaciones,seguir a sus amigos y debatir sobre diferentes temas sociales.
-![hellokity](https://media.tenor.com/vCB3a03WLrEAAAAC/hello-kitty.gif)
----
-## Objetivo del Proyecto ˗ˏˋ ★ ˎˊ˗
-Nuestro objetivo principal es crear una comunidad de personas con distintos temas de discusion donde puedan compartir sus ideas y opiniones personales sin ser juzgados,manteniendo un ambiente sano y seguro.
-ᡣ • . • 𐭩 ♡
-# Descripción del Producto 🌸
-## Características
 
+¡Bienvenido/a, personita interesada en los debates en línea!  ૮₍ ˃ ⤙ ˂ ₎ა  
+*TalkSpace* es una plataforma sencilla donde los usuarios pueden conectarse, compartir publicaciones, seguir a sus amigos y debatir sobre diferentes temas sociales.
+
+![Hello Kitty](https://media.tenor.com/vCB3a03WLrEAAAAC/hello-kitty.gif)
+
+---
+
+## Objetivo del Proyecto ˗ˏˋ ★ ˎˊ˗
+Nuestro objetivo principal es crear una comunidad donde las personas puedan compartir sus ideas y opiniones personales sin ser juzgadas, manteniendo un ambiente sano y seguro.  
+ᡣ • . • 𐭩 ♡
+
+---
+
+
+# Descripción del Producto 🌸
+
+## Características
 - **Registro de Usuarios**: Los usuarios pueden crear una cuenta y registrarse.
 - **Inicio de Sesión**: Los usuarios pueden iniciar sesión para acceder a sus perfiles.
 - **Publicaciones**: Los usuarios pueden crear, editar y eliminar publicaciones.
 - **Seguimiento de Amigos**: Los usuarios pueden seguir a otros usuarios para ver sus publicaciones.
 - **Interacción**: Los usuarios pueden dar "me gusta" a las publicaciones y dejar comentarios.
 
-### Requsitos para el uso de la aplicacion (🧸ི):
+### Requisitos para el uso de la aplicación (🧸ི):
 - Mayores de 15 años.
 - Dirección de correo válida.
 - Aceptar los términos y condiciones de uso.
 - Uso responsable y respetuoso de la plataforma.
+
+---
 
 # Guía de Usuario para TalkSpace 🌟
 
 ¡Bienvenido a **TalkSpace**! Esta guía te ayudará a navegar y utilizar la plataforma de manera efectiva.
 
 ## 1. Registro de Usuario
-
 ### Paso 1: Crear una Cuenta
 - Visita la página de registro.
 - Completa el formulario con tu nombre, correo electrónico y contraseña.
@@ -38,13 +47,11 @@ Nuestro objetivo principal es crear una comunidad de personas con distintos tema
 - Haz clic en el enlace de verificación para activar tu cuenta.
 
 ## 2. Inicio de Sesión
-
 - Dirígete a la página de inicio de sesión.
 - Ingresa tu correo electrónico y contraseña.
 - Haz clic en "Iniciar sesión".
 
 ## 3. Navegación en la Plataforma
-
 ### Inicio
 - En el panel principal, verás las publicaciones recientes de los usuarios que sigues.
 - Usa la barra de búsqueda para encontrar temas o usuarios.
@@ -54,7 +61,6 @@ Nuestro objetivo principal es crear una comunidad de personas con distintos tema
 - Aquí podrás editar tu información, cambiar tu foto de perfil y ver tus publicaciones.
 
 ## 4. Crear y Gestionar Publicaciones
-
 ### Publicar Contenido
 - Haz clic en el botón "Nueva Publicación".
 - Escribe tu mensaje y agrega imágenes o enlaces si lo deseas.
@@ -65,7 +71,6 @@ Nuestro objetivo principal es crear una comunidad de personas con distintos tema
 - Usa las opciones "Editar" o "Eliminar" según necesites.
 
 ## 5. Interacción con Otros Usuarios
-
 ### Seguir Usuarios
 - Busca usuarios en la barra de búsqueda.
 - Haz clic en "Seguir" en su perfil para recibir sus publicaciones.
@@ -80,15 +85,19 @@ Nuestro objetivo principal es crear una comunidad de personas con distintos tema
 ## 7. Cierre de Sesión
 - Haz clic en tu avatar en la esquina superior derecha.
 - Selecciona "Cerrar sesión" para salir de tu cuenta.
-## Soporte
-Si tienes alguna pregunta o encuentras problemas, contáctanos a través de [soporte@talkspace.com](aexl.dx021@gmail.com). 
 
+---
+
+## Soporte
+Si tienes alguna pregunta o encuentras problemas, contáctanos a través de [soporte@talkspace.com](mailto:aexl.dx021@gmail.com). 
 
 ¡Disfruta debatiendo y compartiendo en **TalkSpace**! (ෆ˙ᵕ˙ෆ)♡
-![hellokity](https://i.pinimg.com/originals/57/a1/b6/57a1b60568725dd8735b1c58f7aeb394.gif)
+
+![Hello Kitty](https://i.pinimg.com/originals/57/a1/b6/57a1b60568725dd8735b1c58f7aeb394.gif)
+
 ---
-# Bocetos y Conceptos base 🎀 ྀིྀི :
-# Bocetos Base de TalkSpace ˙📷˚
+
+# Bocetos y Conceptos Base 🎀 ྀིྀི :
 
 ## 1. Pantalla de Registro
 Descripción: Esta pantalla permite a los nuevos usuarios crear una cuenta proporcionando su nombre, correo electrónico y contraseña.  
@@ -117,7 +126,9 @@ Descripción: Muestra las notificaciones de interacciones recientes, como nuevos
 ## 7. Configuración del Usuario
 Descripción: Permite a los usuarios gestionar su cuenta, como cambiar la contraseña, ajustar las preferencias de notificación y cerrar sesión.  
 ![Boceto Configuración](ruta/a/tu/boceto_configuracion.png)
+
 ---
+
 # Problemática del Usuario 🤔
 **Dificultades para Participar en Debates**
 
@@ -133,6 +144,5 @@ Con **TalkSpace**, queremos eliminar esas frustraciones. Hemos diseñado una pla
 Podrás seleccionar temas de tu interés y seguir a otros usuarios que comparten tus pasiones. Además, hemos implementado un sistema de moderación para garantizar un ambiente respetuoso y seguro, donde cada opinión es valorada. 🙌
 
 Ya sea que desees compartir tus pensamientos sobre el cambio climático 🌍 o discutir sobre derechos humanos ✊, **TalkSpace** está aquí para hacer tu experiencia más enriquecedora y accesible. 💬✨
+
 ![Kitty](https://media.tenor.com/st_JMH1pAVwAAAAM/hello-kitty.gif)
-
-
