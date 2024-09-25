@@ -2,7 +2,7 @@
 ¡bienvenido/a personita interesada en los debates en linea! ૮₍ ˃ ⤙ ˂ ₎ა
 *TalkSpace* una plataforma sencilla donde los usuarios pueden conectarse, compartir publicaciones,seguir a sus amigos y debatir sobre diferentes temas sociales.
 ![hellokity](https://media.tenor.com/vCB3a03WLrEAAAAC/hello-kitty.gif)
-***
+---
 ## Objetivo del Proyecto ˗ˏˋ ★ ˎˊ˗
 Nuestro objetivo principal es crear una comunidad de personas con distintos temas de discusion donde puedan compartir sus ideas y opiniones personales sin ser juzgados,manteniendo un ambiente sano y seguro.
 ᡣ • . • 𐭩 ♡
@@ -87,8 +87,8 @@ Si tienes alguna pregunta o encuentras problemas, contáctanos a través de [sop
 ¡Disfruta debatiendo y compartiendo en **TalkSpace**! (ෆ˙ᵕ˙ෆ)♡
 ![hellokity](https://i.pinimg.com/originals/57/a1/b6/57a1b60568725dd8735b1c58f7aeb394.gif)
 ---
-## Bocetos y Conceptos base 🎀 ྀིྀི :
-# Bocetos Base de TalkSpace 📐
+# Bocetos y Conceptos base 🎀 ྀིྀི :
+# Bocetos Base de TalkSpace ˙📷˚
 
 ## 1. Pantalla de Registro
 Descripción: Esta pantalla permite a los nuevos usuarios crear una cuenta proporcionando su nombre, correo electrónico y contraseña.  
@@ -117,5 +117,22 @@ Descripción: Muestra las notificaciones de interacciones recientes, como nuevos
 ## 7. Configuración del Usuario
 Descripción: Permite a los usuarios gestionar su cuenta, como cambiar la contraseña, ajustar las preferencias de notificación y cerrar sesión.  
 ![Boceto Configuración](ruta/a/tu/boceto_configuracion.png)
+---
+# Problemática del Usuario 🤔
+**Dificultades para Participar en Debates**
+
+Imagina que eres una persona apasionada por temas sociales, pero cada vez que intentas unirte a un debate en línea, te sientes abrumado por la cantidad de opiniones y la intensidad de las discusiones. A menudo, te resulta difícil encontrar un espacio donde puedas expresar tus ideas sin temor a ser juzgado. Esto puede llevar a que muchos usuarios se sientan frustrados y se abstengan de participar, perdiéndose la oportunidad de contribuir y aprender. 😔
+
+---
+
+# Solución Propuesta 🌈
+**Una Plataforma Segura y Acogedora**
+
+Con **TalkSpace**, queremos eliminar esas frustraciones. Hemos diseñado una plataforma intuitiva y amigable donde puedes unirte a debates sobre temas sociales de manera clara y organizada. Al ingresar, te damos la bienvenida con un recorrido interactivo que te invita a explorar diversas conversaciones. 🎉
+
+Podrás seleccionar temas de tu interés y seguir a otros usuarios que comparten tus pasiones. Además, hemos implementado un sistema de moderación para garantizar un ambiente respetuoso y seguro, donde cada opinión es valorada. 🙌
+
+Ya sea que desees compartir tus pensamientos sobre el cambio climático 🌍 o discutir sobre derechos humanos ✊, **TalkSpace** está aquí para hacer tu experiencia más enriquecedora y accesible. 💬✨
+![Kitty](https://media.tenor.com/st_JMH1pAVwAAAAM/hello-kitty.gif)
 
 
