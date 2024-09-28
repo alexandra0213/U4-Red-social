@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Neucha&family=Paytone+One&family=Playwrite+PE:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url(https://i.pinimg.com/originals/1d/32/cd/1d32cdd59cc31aa291ba4f46e7a854ed.gif);
+    background-repeat: no-repeat;
+    background: cover;
+    background-size: cover;
+    font-family: "Neucha", cursive;
+
+}

@@ -11,8 +11,6 @@ body {
     background-size: cover;
     font-family: "Paytone One", sans-serif;
     color: #ff82b0;
-
-
 }
 .principal-container {
     background-color: white;
@@ -22,15 +20,6 @@ body {
     max-width: 400px;
     box-shadow: 0 4px 20px rgba(182, 9, 110, 0.885)
 }
-.text-decoration-none {
-    text-decoration: underline;
-    color: #ffacea;
-}
-.text-decoration-none:hover {
-    color: #ffacea;
-}
-
-
 .btn-rosa {
     background-color: #ff82b0; 
     border: none;
@@ -42,11 +31,10 @@ body {
     transform: scale(1.1);
     
 }
-.recuperar-contrasena-container{
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px; 
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 4px 20px rgba(182, 9, 110, 0.885)
+.text-decoration-none {
+    text-decoration: underline;
+    color: #ffacea;
+}
+.text-decoration-none:hover {
+    color: #ffacea;
 }
