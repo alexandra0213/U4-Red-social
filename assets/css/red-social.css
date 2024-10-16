@@ -6,10 +6,7 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: url(https://i.pinimg.com/originals/1d/32/cd/1d32cdd59cc31aa291ba4f46e7a854ed.gif);
-    background-repeat: no-repeat;
-    background: cover;
-    background-size: cover;
+    background-color: #ffcdff;
     font-family: "Neucha", cursive;
 
 }

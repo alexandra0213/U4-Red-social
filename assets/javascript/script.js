@@ -1,32 +1,25 @@
 $(document).ready(function() {
-    // Mostrar la sección de recuperar contraseña
-    $("a[href='#recuperarContainer']").click(function(e) {
-        e.preventDefault();
-        $(".principal-container").hide();  
-        $("#recuperarContainer").removeClass('d-none');
-    });
-    // Volver al inicio de sesión
-    $("#volverBtn").click(function() {
-        $("#recuperarContainer").addClass('d-none');
-        $(".principal-container").show();  
-    });
+  $('#showRegisterLink').click(function(e) {
+      e.preventDefault();
+      $('#loginSection').addClass('d-none');
+      $('#registroSection').removeClass('d-none');
+  });
+
+  $('#showLoginLink').click(function(e) {
+      e.preventDefault();
+      $('#registroSection').addClass('d-none');
+      $('#loginSection').removeClass('d-none');
+  });
+
+  $('#forgotPasswordLink').click(function(e) {
+      e.preventDefault();
+      $('#loginSection').addClass('d-none');
+      $('#recuperarContainer').removeClass('d-none');
+  });
+
+  $('#volverBtn').click(function(e) {
+      e.preventDefault();
+      $('#recuperarContainer').addClass('d-none');
+      $('#loginSection').removeClass('d-none');
+  });
 });
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-  
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })()

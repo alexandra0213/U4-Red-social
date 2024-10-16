@@ -39,7 +39,7 @@ body {
 }
 .btn-rosa:hover {
     background-color: #6e2c44; 
-    transform: scale(1.1);
+    transform: scale(1.05);
     
 }
 .recuperar-contrasena-container{

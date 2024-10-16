@@ -11,6 +11,8 @@ body {
     background-size: cover;
     font-family: "Paytone One", sans-serif;
     color: #ff82b0;
+
+
 }
 .principal-container {
     background-color: white;
@@ -20,6 +22,15 @@ body {
     max-width: 400px;
     box-shadow: 0 4px 20px rgba(182, 9, 110, 0.885)
 }
+.text-decoration-none {
+    text-decoration: underline;
+    color: #ffacea;
+}
+.text-decoration-none:hover {
+    color: #ffacea;
+}
+
+
 .btn-rosa {
     background-color: #ff82b0; 
     border: none;
@@ -28,13 +39,6 @@ body {
 }
 .btn-rosa:hover {
     background-color: #6e2c44; 
-    transform: scale(1.1);
+    transform: scale(1.05);
     
-}
-.text-decoration-none {
-    text-decoration: underline;
-    color: #ffacea;
-}
-.text-decoration-none:hover {
-    color: #ffacea;
 }
