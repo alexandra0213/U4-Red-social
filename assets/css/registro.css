@@ -42,11 +42,3 @@ body {
     transform: scale(1.05);
     
 }
-.recuperar-contrasena-container{
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px; 
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 4px 20px rgba(182, 9, 110, 0.885)
-}
