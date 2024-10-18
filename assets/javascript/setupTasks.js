@@ -15,6 +15,8 @@ let editStatus = false;
 let editId = "";
 
 export const setupTasks = (user) => {
+  console.log("Setup tasks");
+
   console.log(user);
   console.log(user.displayName);
 
@@ -22,6 +24,7 @@ export const setupTasks = (user) => {
   taskForm.addEventListener("submit", async (e) => {
     // Prevenir que la página se recargue
     e.preventDefault();
+    console.log(1);
 
     // Obtener los datos del formulario
     const title = taskForm["title"].value;
@@ -140,3 +143,5 @@ export const setupTasks = (user) => {
     });
   });
 };
+
+setupTasks(null);
