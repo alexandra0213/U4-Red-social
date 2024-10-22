@@ -61,6 +61,7 @@ export const updateTask = (id, newData) =>
 export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
 
 // Foto de perfil
+// Foto de perfil
 
 //red-social
 document.addEventListener("DOMContentLoaded", function () {
