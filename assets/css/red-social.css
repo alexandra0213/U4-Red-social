@@ -1,146 +1,270 @@
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Neucha&family=Paytone+One&family=Playwrite+PE:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-
-/* Fondo general */
-body {
-  background-color: #fff0f5; /* Rosa claro */
-  font-family: "Neucha", cursive;
+/* General settings */
+* {
   margin: 0;
-  padding-top: 60px; /* Ajustado para el navbar */
-  color: #444;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Navbar principal */
-.nav-principal {
-  background: linear-gradient(90deg, #f58fb4, #f7d9e8); /* Degradado elegante */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
-  height: 60px;
-  padding: 0 20px;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f0f9;
+  color: #333;
 }
 
-.navbar-brand {
-  font-family: "Paytone One", sans-serif;
-  color: #fff; /* Texto blanco para resaltar */
-  font-size: 1.5rem;
+button {
+  cursor: pointer;
 }
 
-.navbar-nav .nav-link {
-  color: #fff !important; /* Blanco para mayor contraste */
-  font-size: 1rem;
-  transition: color 0.3s ease, background 0.3s ease;
-  padding: 0 15px;
+/* Intro section */
+.intro {
+  background: linear-gradient(to bottom right, #f5c6e6, #e2a8d3);
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #f58fb4 !important; /* Sutil cambio de color al hover */
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo suave al hover */
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
 }
 
-.navbar-toggler {
-  border-color: #f58fb4;
+.intro p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-.navbar-toggler-icon {
-  background-color: #f58fb4;
+.intro button {
+  background-color: #e87ac9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Formulario para post */
-form {
-  background-color: #ffffff;
-  border: 1px solid #f7d9e8;
-  padding: 6px;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+.intro button:hover {
+  background-color: #d96ab2;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideInDown 1.5s ease;
+}
+
+header .logo h1 {
+  font-size: 2.5rem;
+  color: #e87ac9;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #e87ac9;
+}
+
+/* Main section */
+.main-content {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  animation: fadeIn 2s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  background-color: #f6f0f9;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #e87ac9;
+  color: #fff;
+}
+
+/* Feed */
+.feed {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideInRight 1.5s ease;
+}
+
+.feed .post {
+  background-color: #f6f0f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-form:hover {
+.feed .post:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Efecto de levitación */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-#form-title {
-  font-family: "Holtwood One SC", serif;
-  color: #f58fb4;
-  font-size: 1.8rem;
-  text-align: center;
+.feed .post h3 {
+  margin-top: 0;
+  color: #e87ac9;
 }
 
-label {
-  color: #888;
+.feed .post p {
+  color: #555;
 }
 
-/* Inputs */
-input[type="text"],
+/* New Post */
+.new-post {
+  background-color: #fff;
+  border: 2px dashed #e87ac9;
+  padding: 20px;
+  animation: pulse 2s infinite;
+}
+
 textarea {
-  background-color: #f9f9f9;
-  border: 1px solid #f7d9e8;
-  border-radius: 10px;
+  width: 100%;
   padding: 10px;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  resize: none;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-input[type="text"]:focus,
-textarea:focus {
-  box-shadow: 0 0 10px rgba(245, 143, 180, 0.7); /* Color del borde más vivo */
-  border-color: #f58fb4;
-}
-
-/* Botón de agregar */
-#btn-agregar {
-  background: linear-gradient(
-    90deg,
-    #f58fb4,
-    #f28fba
-  ); /* Degradado para el botón */
+button {
+  background-color: #e87ac9;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#btn-agregar:hover {
-  background: linear-gradient(
-    90deg,
-    #f28fba,
-    #f79ed6
-  ); /* Cambio de degradado al hover */
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(200, 186, 191, 0.4); /* Sombra suave */
+button:hover {
+  background-color: #d96ab2;
+  box-shadow: 0 0 10px rgba(233, 122, 201, 0.7);
 }
 
-/* Contenedor de tareas */
-#tasks-container {
-  margin-top: 30px;
-  font-family: "Neucha", cursive;
-}
-
-.task-article {
-  background-color: #ffffff;
-  border: 1px solid #f7d9e8;
-  border-radius: 10px;
+/* Footer */
+footer {
+  background-color: #fff;
   padding: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.task-article:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-/* Botón de búsqueda */
-.btn-outline-success {
-  color: #f58fb4;
-  border-color: #f58fb4;
-  transition: color 0.3s ease, border-color 0.3s ease;
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.btn-outline-success:hover {
-  color: white;
-  background-color: #f58fb4;
-  border-color: #f58fb4;
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.reply-form {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #e87ac9;
+  border-radius: 10px;
+  background-color: #f9f9f9;
 }

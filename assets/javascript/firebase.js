@@ -61,3 +61,18 @@ export const updateTask = (id, newData) =>
 export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
 
 // Foto de perfil
+
+//red-social
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleccionamos todos los botones de responder
+  const replyButtons = document.querySelectorAll(".reply-btn");
+
+  // Agregamos un evento de clic a cada botón de respuesta
+  replyButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Mostramos el área de respuesta asociada
+      const replyForm = button.nextElementSibling; // Se asume que el div de respuesta sigue al botón
+      replyForm.style.display = replyForm.style.display === "none" ? "block" : "none";
+    });
+  });
+});
