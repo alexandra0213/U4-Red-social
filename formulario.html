@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="icon" href="./assets/img/logo-talkSpace-removebg-preview.png" type="image/x-icon">
     <script type="module" src="/assets/javascript/script.js"></script>
-    <script type="module" src="/assets/javascript/firebase.js"></script>
 </head>
 <body>
     <main>
@@ -16,53 +15,50 @@
             <img src="/assets/img/logo-talkSpace-removebg-preview.png" alt="Logo" class="logo img-fluid" style="max-width: 200px; position: fixed; top: 5px; right: 10px;">
         </div>
 
-<!-- Login Section -->
-<section id="loginSection" class="active-section">
-    <div class="principal-container">
-        <h1 class="bienvenida text-center">¡Bienvenido a TalkSpace!</h1>
-        <div class="inicio-sesion">
-            <p class="parrafo text-center">¿Ya tienes una cuenta?</p>
-            <p class="mt-3 text-center">Inicia sesión con: <button class="text-decoration-none" id="showLoginWith">da click aquí</button></p>
-            <h2 class="iniciar mt-5 text-center">Iniciar Sesión</h2>
-            <div class="border-top my-4"></div>
-            <form id="loginForm" class="mt-4">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required>
+        <!-- Login Section -->
+        <section id="loginSection" class="active-section">
+            <div class="principal-container">
+                <h1 class="bienvenida text-center">¡Bienvenido a TalkSpace!</h1>
+                <div class="inicio-sesion">
+                    <p class="parrafo text-center">¿Ya tienes una cuenta?</p>
+                    <p class="mt-3 text-center">Inicia sesión con: <button class="text-decoration-none" id="showLoginWith">da click aquí</button></p>
+                    <h2 class="iniciar mt-5 text-center">Iniciar Sesión</h2>
+                    <div class="border-top my-4"></div>
+                    <form id="loginForm" class="mt-4">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="signin-email" placeholder="Ingresa tu correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="signin-password" placeholder="Ingresa tu contraseña" required>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <div>
+                                <input type="checkbox" id="rememberMe">
+                                <label for="rememberMe" class="form-check-label">Recordarme</label>
+                            </div>
+                            <a href="#recuperarContainer" class="text-decoration-none" id="forgotPasswordLink">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="btn btn-rosa w-100">Iniciar Sesión</button>
+                    </form>
+                    <p class="mt-3 text-center">¿No tienes cuenta? <a href="#" class="text-decoration-none" id="showRegisterLink">Regístrate aquí</a></p>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
-                </div>
-                <div class="d-flex justify-content-between mb-3">
-                    <div>
-                        <input type="checkbox" id="rememberMe">
-                        <label for="rememberMe" class="form-check-label">Recordarme</label>
-                    </div>
-                    <a href="#recuperarContainer" class="text-decoration-none" id="forgotPasswordLink">¿Olvidaste tu contraseña?</a>
-                </div>
-                <button type="submit" class="btn btn-rosa w-100">Iniciar Sesión</button>
-            </form>
-            <p class="mt-3 text-center">¿No tienes cuenta? <a href="#" class="text-decoration-none" id="showRegisterLink">Regístrate aquí</a></p>
-        </div>
-    </div>
-</section>
+            </div>
+        </section>
 
-<!-- Iniciar Section with -->
-<section id="loginwith" class="d-none">
-    <div class="principal-container">
-        <br>
-        <h1 class="text-center" id="tittle">Elige la opción de tu preferencia:</h1>
-        <button id="loginWithGoogle" class="btn btn-rosa w-100">Iniciar sesión con Google</button>
-        <button id="loginWithFacebook" class="btn btn-rosa w-100 mt-3">Iniciar sesión con Facebook</button>
-        <button id="loginWithGit" class="btn btn-rosa w-100 mt-3">Iniciar sesión con GitHub</button>
-        <p class="mt-3 text-center"><a href="#" class="text-decoration-none" id="backToLogin">Regresar a Iniciar Sesión</a></p>
-        <img src="./assets/img/chiaki-removebg-preview.png" alt="ChiakiNanami" class="chiaki">
-    </div>
-</section>
-
-        
-
+        <!-- Iniciar Section with -->
+        <section id="loginwith" class="d-none">
+            <div class="principal-container">
+                <br>
+                <h1 class="text-center" id="tittle">Elige la opción de tu preferencia:</h1>
+                <button id="loginWithGoogle" class="btn btn-rosa w-100">Iniciar sesión con Google</button>
+                <button id="loginWithFacebook" class="btn btn-rosa w-100 mt-3">Iniciar sesión con Facebook</button>
+                <button id="loginWithGit" class="btn btn-rosa w-100 mt-3">Iniciar sesión con GitHub</button>
+                <p class="mt-3 text-center"><a href="#" class="text-decoration-none" id="backToLogin">Regresar a Iniciar Sesión</a></p>
+                <img src="./assets/img/chiaki-removebg-preview.png" alt="ChiakiNanami" class="chiaki">
+            </div>
+        </section>
 
         <!-- Registration Section -->
         <section id="registroSection" class="d-none">
@@ -92,7 +88,6 @@
                     </div>
                     <button type="submit" class="btn btn-rosa w-100">Registrarte</button>
                     <p class="mt-3 text-center">¿Ya tienes cuenta? <a href="#" class="text-decoration-none" id="showLoginLink">Inicia Sesión aquí</a></p>
-
                 </form>
             </div>
         </section>

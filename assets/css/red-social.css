@@ -1,12 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Neucha&family=Paytone+One&family=Playwrite+PE:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Neucha&family=Paytone+One&family=Playwrite+PE:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #ffcdff;
-    font-family: "Neucha", cursive;
+/* Fondo general */
+body {
+  background-color: #fff0f5; /* Rosa claro */
+  font-family: "Neucha", cursive;
+  margin: 0;
+  padding-top: 60px; /* Ajustado para el navbar */
+  color: #444;
+}
 
+/* Navbar principal */
+.nav-principal {
+  background: linear-gradient(90deg, #f58fb4, #f7d9e8); /* Degradado elegante */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  height: 60px;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  font-family: "Paytone One", sans-serif;
+  color: #fff; /* Texto blanco para resaltar */
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important; /* Blanco para mayor contraste */
+  font-size: 1rem;
+  transition: color 0.3s ease, background 0.3s ease;
+  padding: 0 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f58fb4 !important; /* Sutil cambio de color al hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo suave al hover */
+}
+
+.navbar-toggler {
+  border-color: #f58fb4;
+}
+
+.navbar-toggler-icon {
+  background-color: #f58fb4;
+}
+
+/* Formulario para post */
+form {
+  background-color: #ffffff;
+  border: 1px solid #f7d9e8;
+  padding: 6px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Efecto de levitación */
+}
+
+#form-title {
+  font-family: "Holtwood One SC", serif;
+  color: #f58fb4;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+label {
+  color: #888;
+}
+
+/* Inputs */
+input[type="text"],
+textarea {
+  background-color: #f9f9f9;
+  border: 1px solid #f7d9e8;
+  border-radius: 10px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  box-shadow: 0 0 10px rgba(245, 143, 180, 0.7); /* Color del borde más vivo */
+  border-color: #f58fb4;
+}
+
+/* Botón de agregar */
+#btn-agregar {
+  background: linear-gradient(
+    90deg,
+    #f58fb4,
+    #f28fba
+  ); /* Degradado para el botón */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#btn-agregar:hover {
+  background: linear-gradient(
+    90deg,
+    #f28fba,
+    #f79ed6
+  ); /* Cambio de degradado al hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(200, 186, 191, 0.4); /* Sombra suave */
+}
+
+/* Contenedor de tareas */
+#tasks-container {
+  margin-top: 30px;
+  font-family: "Neucha", cursive;
+}
+
+.task-article {
+  background-color: #ffffff;
+  border: 1px solid #f7d9e8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-article:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de búsqueda */
+.btn-outline-success {
+  color: #f58fb4;
+  border-color: #f58fb4;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  color: white;
+  background-color: #f58fb4;
+  border-color: #f58fb4;
+}
+.publicaciones{
+  font-size: small;
 }
