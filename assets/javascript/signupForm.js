@@ -1,7 +1,5 @@
-let users = []; // Array para almacenar los usuarios
-
 document.addEventListener('DOMContentLoaded', () => {
-    const signupForm = document.querySelector('#formularioRegistro');
+    const signupForm = document.querySelector('#formularioRegistro'); // Asegúrate de que este ID esté correcto
     signupForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -22,18 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             password: signupPassword
         };
 
-        users.push(newUser); // Agregar el nuevo usuario al array
-        console.log('Registrado', newUser);
+        // Guardar en localStorage
+        localStorage.setItem('currentUser', JSON.stringify(newUser));
 
-        // Mostrar datos del usuario
-        displayUser(newUser);
+        // Redirigir a la página de red social
+        window.location.href = 'red-social.html';
     });
-
-    
-    function displayUser(user) {
-        document.getElementById('registroSection').classList.add('d-none');
-        document.getElementById('userSection').classList.remove('d-none');
-        document.getElementById('displayUsername').innerText = user.username;
-        document.getElementById('displayEmail').innerText = user.email;
-    }
 });

@@ -1,6 +1,10 @@
 import "./signupForm.js";
 
+localStorage.setItem('currentUser', JSON.stringify(newUser));
+
 document.addEventListener('DOMContentLoaded', () => {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    
     // Mostrar el formulario de registro
     document.getElementById('showRegisterLink').addEventListener('click', (e) => {
         e.preventDefault();
@@ -42,5 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('loginwith').classList.add('d-none');
         document.getElementById('loginSection').classList.remove('d-none');
     });
+
+    // Mostrar información del usuario si está registrado
+    if (currentUser) {
+        document.getElementById('displayUsername').innerText = currentUser.username;
+        document.getElementById('displayEmail').innerText = currentUser.email;
+
+        // Cambiar el texto del encabezado
+        document.getElementById('headerGreeting').innerText = `Un lugar seguro para ${currentUser.username}`;
+        
+        // Mostrar un saludo personalizado
+        document.getElementById('userGreeting').innerText = `¡Hola, ${currentUser.username}! Bienvenido a tu espacio.`;
+    } else {
+        // Si no hay usuario, redirigir a la página de registro
+        window.location.href = 'registro.html';
+    }
+
+
 });
 
