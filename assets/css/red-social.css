@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Paytone+One&family=Playwrite+PE:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Paytone+One&family=Playwrite+PE:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 /* General settings */
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;

@@ -1,41 +1,39 @@
 import {
-  createTask,
-  onGetTask,
-  deleteTask,
-  updateTask,
-  getTask,
+  createPost,
+  onGetPost,
+  deletePost,
+  updatePost,
+  getPost,
 } from "./firebase.js";
 import { showMessage } from "./toastMessage.js";
 
-const taskForm = document.querySelector("#task-form");
-const tasksContainer = document.querySelector("#tasks-container");
+const postForm = document.querySelector("#post-form");
+const postsContainer = document.querySelector("#post-container");
 
 // Variables para la edición
 let editStatus = false;
 let editId = "";
 
-export const setupTasks = (user) => {
+export const setupPost = (user) => {
   console.log(user);
   console.log(user.displayName);
 
   //CREATE
-  taskForm.addEventListener("submit", async (e) => {
+  postForm.addEventListener("submit", async (e) => {
     // Prevenir que la página se recargue
     e.preventDefault();
 
     // Obtener los datos del formulario
-    const title = taskForm["title"].value;
-    const description = taskForm["description"].value;
+    const description = postForm["description"].value;
 
     // Obtener la fecha y hora actual
     const dateTime = new Date().toLocaleString();
 
-    // Crear y/o editar una nueva tarea
+    // Crear y/o editar un nuevo post
     try {
       if (!editStatus) {
-        // Crear tarea
-        await createTask(
-          title,
+        // Crear post
+        await createPost(
           description,
           user.displayName,
           user.photoURL,
@@ -45,8 +43,8 @@ export const setupTasks = (user) => {
         // Mostrar mensaje de éxito
         showMessage("Post creado", "success");
       } else {
-        // Actualizar tarea (con fecha y hora)
-        await updateTask(editId, { title, description, dateTime });
+        // Actualizar post (con fecha y hora)
+        await updatePost(editId, { description, dateTime });
         // Mostrar mensaje de éxito
         showMessage("Post actualizado", "success");
 
@@ -56,13 +54,13 @@ export const setupTasks = (user) => {
         editId = "";
 
         // Modificamos lo que muestra el formulario
-        document.getElementById("form-title").innerHTML =
+        document.getElementById("post-title").innerHTML =
           "Añadir un nuevo post";
-        taskForm["btn-agregar"].value = "Postear";
+        postForm["btn-agregar"].value = "Publicar";
       }
 
       // Limpiar el formulario
-      taskForm.reset();
+      postForm.reset();
     } catch (error) {
       // Mostrar mensaje de error
       showMessage(error.code, "error");
@@ -70,14 +68,14 @@ export const setupTasks = (user) => {
   });
 
   // READ
-  onGetTask((querySnapshot) => {
-    let tasksHtml = "";
+  onGetPost((querySnapshot) => {
+    let postsHtml = "";
 
     querySnapshot.forEach((doc) => {
       const data = doc.data();
 
-      tasksHtml += `
-      <article class="task-container border border-2 rounded-2 p-3 my-3">
+      postsHtml += `
+      <article class="post-container border border-2 rounded-2 p-3 my-3">
         <header class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center gap-3">
             <img class="task-profile-picture rounded-circle" src="${
@@ -102,8 +100,8 @@ export const setupTasks = (user) => {
       `;
     });
 
-    // Mostrar las tareas en el DOM
-    tasksContainer.innerHTML = tasksHtml;
+    // Mostrar los posts en el DOM
+    postsContainer.innerHTML = postsHtml;
     // Todo: C R U D
     // *Update
     // Obtenemos los botones de editar
@@ -112,19 +110,18 @@ export const setupTasks = (user) => {
     btnsEditar.forEach((btn) => {
       btn.addEventListener("click", async ({ target: { dataset } }) => {
         // Obtenemos el documento
-        const doc = await getTask(dataset.id);
+        const doc = await getPost(dataset.id);
         // Obtenemos los datos
-        const task = doc.data();
+        const post = doc.data();
 
         // Llenamos el formulario con los datos
-        taskForm["title"].value = task.title;
-        taskForm["description"].value = task.description;
+        postForm["description"].value = task.description;
         // Actualizamos el estado de edición y el id edición
         editStatus = true;
         editId = doc.id;
         // Cambiamos lo que muestra el formulario
-        document.getElementById("form-title").innerHTML = "Editar post";
-        taskForm["btn-agregar"].value = "Guardar cambios";
+        document.getElementById("post-title").innerHTML = "Editar post";
+        postForm["btn-agregar"].value = "Guardar cambios";
       });
     });
     // !Delete
@@ -134,8 +131,8 @@ export const setupTasks = (user) => {
     // Iteramos sobre cada botón
     btnsEliminar.forEach((btn) => {
       btn.addEventListener("click", ({ target: { dataset } }) => {
-        deleteTask(dataset.id);
-        showMessage("Tarea eliminada", "success");
+        deletePost(dataset.id);
+        showMessage("Post eliminado", "success");
       });
     });
   });
