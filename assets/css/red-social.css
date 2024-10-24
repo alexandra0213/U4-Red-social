@@ -298,3 +298,23 @@ footer {
     filter: hue-rotate(360deg);
   }
 }
+
+/* styles.css */
+
+.post {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.like-button {
+  background-color: #f071e9;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.like-button.liked {
+  background-color: #e06c6c; /* Color para el botón "liked" */
+}

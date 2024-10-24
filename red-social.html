@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./assets/css/red-social.css" />
     <script type="module" src="./assets/javascript/setupTasks.js"></script>
     <script type="module" src="./assets/javascript/firebase.js"></script>
+    <script type="module" src="./assets/javascript/like.js"></script>
   </head>
   <body>
     <main class="container">
@@ -86,11 +87,23 @@
         </div>
       </section>
 
+      <div id="tasks-container" class="mt-3">
+        Contenedor de tareas
+        <article class="task-article border border-dark border-2 rounded-2 p-3">
+          <h4>Título de la tarea</h4>
+          <hr />
+          <p>Descripción de la tarea</p>
+          <div class="post">
+            <button id="like-button" class="like-button">Like</button>
+            <span id="likes-count">0 Likes</span>
+          </div>
+        </article>
+      </div>
+
       <footer class="text-center py-4">
         <p>&copy; 2024 TalkSpace - Diseñado por Las error 404.</p>
       </footer>
     </main>
-
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
