@@ -1,6 +1,12 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
 
+// Autenticación
+import {
+  getAuth,
+  updateProfile,
+} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+
 // Firestore
 import {
   getFirestore,
@@ -28,40 +34,40 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+// Inicializar Autenticacion de Firebase y obtener una referencia del servicio
+export const auth = getAuth(app);
 // Inicializar Firestore
 export const db = getFirestore();
 
 //Todo: Operaciones CRUD
-//**Crear tarea (Create) */
-export const createTask = (
-  title,
+//**Crear post (Create) */
+export const createPost = (
   description,
   userName,
   userImage,
   userEmail,
   dateTime
 ) =>
-  addDoc(collection(db, "tasks"), {
-    title,
+  addDoc(collection(db, "posts"), {
     description,
     userName,
     userImage,
     userEmail,
     dateTime,
   });
-//**Leer tarea (Read) */
-export const onGetTask = (callback) =>
-  onSnapshot(collection(db, "tasks"), callback);
+//**Leer post (Read) */
+export const onGetPost = (callback) =>
+  onSnapshot(collection(db, "posts"), callback);
 
-export const getTask = (id) => getDoc(doc(db, "tasks", id));
-//**Actualizar tareas (Update) */
-export const updateTask = (id, newData) =>
-  updateDoc(doc(db, "tasks", id), newData);
-//**Borrar tareas (Delete) */
-export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
+export const getPost = (id) => getDoc(doc(db, "posts", id));
+//**Actualizar posts (Update) */
+export const updatePost = (id, newData) =>
+  updateDoc(doc(db, "posts", id), newData);
+//**Borrar posts (Delete) */
+export const deletePost = (id) => deleteDoc(doc(db, "posts", id));
 
 // Foto de perfil
-// Foto de perfil
+export { updateProfile };
 
 //red-social
 document.addEventListener("DOMContentLoaded", function () {
@@ -73,7 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       // Mostramos el área de respuesta asociada
       const replyForm = button.nextElementSibling; // Se asume que el div de respuesta sigue al botón
-      replyForm.style.display = replyForm.style.display === "none" ? "block" : "none";
+      replyForm.style.display =
+        replyForm.style.display === "none" ? "block" : "none";
     });
   });
 });
