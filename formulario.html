@@ -1,118 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TalkSpace</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/registro.css">
-    <link rel="icon" href="./assets/img/logo-talkSpace-removebg-preview.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/registro.css" />
+    <link
+      rel="icon"
+      href="./assets/img/logo-talkSpace-removebg-preview.png"
+      type="image/x-icon"
+    />
     <script type="module" src="/assets/javascript/script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="position-relative">
-            <img src="/assets/img/logo-talkSpace-removebg-preview.png" alt="Logo" class="logo img-fluid" style="max-width: 200px; position: fixed; top: 5px; right: 10px;">
-        </div>
+      <div class="position-relative">
+        <img
+          src="/assets/img/logo-talkSpace-removebg-preview.png"
+          alt="Logo"
+          class="logo img-fluid"
+          style="max-width: 200px; position: fixed; top: 5px; right: 10px"
+        />
+      </div>
 
-        <!-- Login Section -->
-        <section id="loginSection" class="active-section">
-            <div class="principal-container">
-                <h1 class="bienvenida text-center">¡Bienvenido a TalkSpace!</h1>
-                <div class="inicio-sesion">
-                    <p class="parrafo text-center">¿Ya tienes una cuenta?</p>
-                    <p class="mt-3 text-center">Inicia sesión con: <button class="text-decoration-none" id="showLoginWith">da click aquí</button></p>
-                    <h2 class="iniciar mt-5 text-center">Iniciar Sesión</h2>
-                    <div class="border-top my-4"></div>
-                    <form id="loginForm" class="mt-4">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="signin-email" placeholder="Ingresa tu correo" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="signin-password" placeholder="Ingresa tu contraseña" required>
-                        </div>
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <input type="checkbox" id="rememberMe">
-                                <label for="rememberMe" class="form-check-label">Recordarme</label>
-                            </div>
-                            <a href="#recuperarContainer" class="text-decoration-none" id="forgotPasswordLink">¿Olvidaste tu contraseña?</a>
-                        </div>
-                        <button type="submit" class="btn btn-rosa w-100">Iniciar Sesión</button>
-                    </form>
-                    <p class="mt-3 text-center">¿No tienes cuenta? <a href="#" class="text-decoration-none" id="showRegisterLink">Regístrate aquí</a></p>
+      <!-- Login Section -->
+      <section id="loginSection" class="active-section">
+        <div class="principal-container">
+          <h1 class="bienvenida text-center">¡Bienvenido a TalkSpace!</h1>
+          <div class="inicio-sesion">
+            <p class="parrafo text-center">¿Ya tienes una cuenta?</p>
+            <p class="mt-3 text-center">
+              Inicia sesión con:
+              <button class="text-decoration-none" id="showLoginWith">
+                da click aquí
+              </button>
+            </p>
+            <h2 class="iniciar mt-5 text-center">Iniciar Sesión</h2>
+            <div class="border-top my-4"></div>
+            <form id="loginForm" class="mt-4">
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signin-email"
+                  placeholder="Ingresa tu correo"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signin-password"
+                  placeholder="Ingresa tu contraseña"
+                  required
+                />
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div>
+                  <input type="checkbox" id="rememberMe" />
+                  <label for="rememberMe" class="form-check-label"
+                    >Recordarme</label
+                  >
                 </div>
-            </div>
-        </section>
+                <a
+                  href="#recuperarContainer"
+                  class="text-decoration-none"
+                  id="forgotPasswordLink"
+                  >¿Olvidaste tu contraseña?</a
+                >
+              </div>
+              <button type="submit" class="btn btn-rosa w-100">
+                Iniciar Sesión
+              </button>
+            </form>
+            <p class="mt-3 text-center">
+              ¿No tienes cuenta?
+              <a href="#" class="text-decoration-none" id="showRegisterLink"
+                >Regístrate aquí</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Iniciar Section with -->
-        <section id="loginwith" class="d-none">
-            <div class="principal-container">
-                <br>
-                <h1 class="text-center" id="tittle">Elige la opción de tu preferencia:</h1>
-                <button id="loginWithGoogle" class="btn btn-rosa w-100">Iniciar sesión con Google</button>
-                <button id="loginWithFacebook" class="btn btn-rosa w-100 mt-3">Iniciar sesión con Facebook</button>
-                <button id="loginWithGit" class="btn btn-rosa w-100 mt-3">Iniciar sesión con GitHub</button>
-                <p class="mt-3 text-center"><a href="#" class="text-decoration-none" id="backToLogin">Regresar a Iniciar Sesión</a></p>
-                <img src="./assets/img/chiaki-removebg-preview.png" alt="ChiakiNanami" class="chiaki">
-            </div>
-        </section>
+      <!-- Iniciar Section with -->
+      <section id="loginwith" class="d-none">
+        <div class="principal-container">
+          <br />
+          <h1 class="text-center" id="tittle">
+            Elige la opción de tu preferencia:
+          </h1>
+          <button id="loginWithGoogle" class="btn btn-rosa w-100">
+            Iniciar sesión con Google
+          </button>
+          <button id="loginWithFacebook" class="btn btn-rosa w-100 mt-3">
+            Iniciar sesión con Facebook
+          </button>
+          <button id="loginWithGit" class="btn btn-rosa w-100 mt-3">
+            Iniciar sesión con GitHub
+          </button>
+          <p class="mt-3 text-center">
+            <a href="#" class="text-decoration-none" id="backToLogin"
+              >Regresar a Iniciar Sesión</a
+            >
+          </p>
+          <img
+            src="./assets/img/chiaki-removebg-preview.png"
+            alt="ChiakiNanami"
+            class="chiaki"
+          />
+        </div>
+      </section>
 
-        <!-- Registration Section -->
-        <section id="registroSection" class="d-none">
-            <div class="principal-container">
-                <h1 class="text-center" id="tittle">REGÍSTRATE</h1>
-                <p class="text-center mb-4">¡Inicia tus debates en línea de la mejor manera!</p>
-                <form id="formularioRegistro" name="formularioRegistro">
-                    <div class="border-top my-4"></div>
-                    <div class="mb-3">
-                        <label for="registroEmail" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="registroEmail" placeholder="name@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <div class="input-group">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="registroPassword" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="registroPassword" placeholder="Contraseña" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="registroPasswordRepeat" class="form-label">Repetir Contraseña</label>
-                        <input type="password" class="form-control" id="registroPasswordRepeat" placeholder="Repetir Contraseña" required>
-                    </div>
-                    <button type="submit" class="btn btn-rosa w-100">Registrarte</button>
-                    <p class="mt-3 text-center">¿Ya tienes cuenta? <a href="#" class="text-decoration-none" id="showLoginLink">Inicia Sesión aquí</a></p>
-                </form>
+      <!-- Registration Section -->
+      <section id="registroSection" class="d-none">
+        <div class="principal-container">
+          <h1 class="text-center" id="tittle">REGÍSTRATE</h1>
+          <p class="text-center mb-4">
+            ¡Inicia tus debates en línea de la mejor manera!
+          </p>
+          <form id="formularioRegistro" name="formularioRegistro">
+            <div class="border-top my-4"></div>
+            <div class="mb-3">
+              <label for="registroEmail" class="form-label"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="registroEmail"
+                placeholder="name@example.com"
+                required
+              />
             </div>
-        </section>
-
-        <!-- Password Recovery Section -->
-        <section id="recuperarContainer" class="d-none">
-            <div class="recuperar-contrasena-container">
-                <h2 class="text-center">Recuperar Contraseña</h2>
-                <p class="text-center mb-4">Ingresa tu correo electrónico para recibir instrucciones para restablecer tu contraseña.</p>
-                <form id="recuperarForm">
-                    <div class="mb-3">
-                        <label for="recuperarEmail" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="recuperarEmail" placeholder="name@example.com" required>
-                    </div>
-                    <button type="submit" class="btn btn-rosa w-100">Enviar Instrucciones</button>
-                </form>
-                <p class="mt-3 text-center">
-                    <button id="volverBtn" class="btn btn-rosa w-100">Regresar al inicio de sesión</button>
-                </p>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  aria-describedby="inputGroupPrepend"
+                  required
+                />
+              </div>
             </div>
-        </section>
-    </main>     
+            <div class="mb-3">
+              <label for="registroPassword" class="form-label"
+                >Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="registroPassword"
+                placeholder="Contraseña"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="registroPasswordRepeat" class="form-label"
+                >Repetir Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="registroPasswordRepeat"
+                placeholder="Repetir Contraseña"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-rosa w-100">
+              Registrarte
+            </button>
+            <p class="mt-3 text-center">
+              ¿Ya tienes cuenta?
+              <a href="#" class="text-decoration-none" id="showLoginLink"
+                >Inicia Sesión aquí</a
+              >
+            </p>
+          </form>
+        </div>
+      </section>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+      <!-- Password Recovery Section -->
+      <section id="recuperarContainer" class="d-none">
+        <div class="recuperar-contrasena-container">
+          <h2 class="text-center">Recuperar Contraseña</h2>
+          <p class="text-center mb-4">
+            Ingresa tu correo electrónico para recibir instrucciones para
+            restablecer tu contraseña.
+          </p>
+          <form id="recuperarForm">
+            <div class="mb-3">
+              <label for="recuperarEmail" class="form-label"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="recuperarEmail"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-rosa w-100">
+              Enviar Instrucciones
+            </button>
+          </form>
+          <p class="mt-3 text-center">
+            <button id="volverBtn" class="btn btn-rosa w-100">
+              Regresar al inicio de sesión
+            </button>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
