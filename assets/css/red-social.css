@@ -301,17 +301,11 @@ footer {
 
 /* styles.css */
 
-.post {
-  border: 1px solid #ccc;
-  padding: 16px;
-  margin: 16px 0;
-}
-
 .like-button {
   background-color: #f071e9;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
