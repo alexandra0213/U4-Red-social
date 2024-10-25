@@ -19,7 +19,7 @@ googleButton.addEventListener("click", async () => {
   try {
     const credentials = await signInWithPopup(auth, provider);
 
-    // showMessage("Sesión iniciada", "success");
+    showMessage("Sesión iniciada", "success");
     // Redirigir a red-social.html
     window.location.href = "./red-social.html";
   } catch (error) {
