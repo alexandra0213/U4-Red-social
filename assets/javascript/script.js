@@ -1,18 +1,16 @@
 // Importamos la app
 import { auth } from "./firebase.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
-import { checkLogin } from "./checkLogin.js";
+import "./checkLogin.js";
 
 // Importamos el archivo de registro
 import "./signupForm.js";
 import "./signinForm.js";
 import "./sigOut.js";
-import "./googleLogin.js";
 
 // Manejo de autenticación
 onAuthStateChanged(auth, async (user) => {
   console.log(user);
-  checkLogin(user);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -60,3 +58,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loginSection").classList.remove("d-none");
   });
 });
+

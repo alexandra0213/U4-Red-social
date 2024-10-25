@@ -2,78 +2,61 @@ import { auth, updateProfile } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
 import { showMessage } from "./toastMessage.js";
 
-let users = []; // Array para almacenar los usuarios
-
 document.addEventListener("DOMContentLoaded", () => {
   const signupForm = document.querySelector("#formularioRegistro");
 
   signupForm.addEventListener("submit", async (e) => {
-    // Evitar que la página se recargue
     e.preventDefault();
-    console.log("Formulario enviado");
 
     // Obtener datos del formulario
-    const signupEmail = document.querySelector("#registroEmail").value;
-    const signupUsername = document.querySelector("#username").value;
+    const signupEmail = document.querySelector("#registroEmail").value.trim();
+    const signupUsername = document.querySelector("#username").value.trim();
     const signupPassword = document.querySelector("#registroPassword").value;
-    const signupPasswordRepeat = document.querySelector(
-      "#registroPasswordRepeat"
-    ).value;
+    const signupPasswordRepeat = document.querySelector("#registroPasswordRepeat").value;
 
+    // Validar que las contraseñas coincidan
     if (signupPassword !== signupPasswordRepeat) {
-      alert("Las contraseñas no coinciden");
+      showMessage("Las contraseñas no coinciden", "error");
       return;
     }
 
-    // Almacenar el usuario
-    const newUser = {
-      email: signupEmail,
-      username: signupUsername,
-      password: signupPassword,
-    };
-
-    users.push(newUser); // Agregar el nuevo usuario al array
-    console.log("Registrado", newUser);
-
-    // Mostrar datos del usuario
-    displayUser(newUser);
-
     // Manejo de errores
     try {
-      const userCredentials = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      const userCredentials = await createUserWithEmailAndPassword(auth, signupEmail, signupPassword);
+
       // Actualizar el perfil del usuario
-      await updateProfile(auth.currentUser, {
-        displayName,
+      await updateProfile(userCredentials.user, {
+        displayName: signupUsername,
       });
+
       // Limpiar el formulario
       signupForm.reset();
 
+      // Guardar la información del usuario en localStorage
+      localStorage.setItem('user', JSON.stringify({
+        email: signupEmail,
+        username: signupUsername,
+      }));
+
+      // Debugging: Mensaje antes de redirigir
+      console.log("Registro exitoso, redirigiendo a red-social.html...");
+
+      // Redirigir a red-social.html
+      window.location.href = 'red-social.html';
+
       // Mostrar mensaje de éxito
-      showMessage("Usuario registrado", "success");
+      showMessage("Usuario registrado con éxito", "success");
     } catch (error) {
-      // Registro fallido
-      console.log(error);
-      // Mostrar mensaje de error
+      console.error("Error al registrar el usuario:", error);
       if (error.code === "auth/email-already-in-use") {
         showMessage("El correo ya está en uso", "error");
       } else if (error.code === "auth/invalid-email") {
         showMessage("Correo inválido", "error");
       } else if (error.code === "auth/weak-password") {
-        showMessage("Contraseña vulnerable", "error");
-      } else if (error.code) {
-        showMessage(error.message, "error");
+        showMessage("La contraseña debe tener al menos 6 caracteres", "error");
+      } else {
+        showMessage("Error inesperado: " + error.message, "error");
       }
     }
   });
-
-  function displayUser(user) {
-    document.getElementById("registroSection").classList.add("d-none");
-    document.getElementById("userSection").classList.remove("d-none");
-    document.getElementById("displayUsername").innerText = user.username;
-    document.getElementById("displayEmail").innerText = user.email;
-  }
 });
