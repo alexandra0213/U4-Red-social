@@ -7,7 +7,6 @@ import "./checkLogin.js";
 import "./signupForm.js";
 import "./signinForm.js";
 import "./sigOut.js";
-import "./googleLogin.js";
 
 // Manejo de autenticación
 onAuthStateChanged(auth, async (user) => {
@@ -59,3 +58,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loginSection").classList.remove("d-none");
   });
 });
+
