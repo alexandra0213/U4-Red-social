@@ -50,7 +50,15 @@
         <aside class="sidebar col-md-3">
           <ul class="list-unstyled">
             <li><a href="#">Mi Muro</a></li>
-            <li><a href="#">Ajustes</a></li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+               Ajustes
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><button type="button" class="btn btn-outline-danger bi bi-box-arrow-in-right">Cerrar sesión</button></a></li>
+                <li><a class="dropdown-item text-center href="#">Pedir ayuda</a></li>
+              </ul>
+            </div>
           </ul>
         </aside>
 

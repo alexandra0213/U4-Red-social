@@ -58,3 +58,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loginSection").classList.remove("d-none");
   });
 });
+

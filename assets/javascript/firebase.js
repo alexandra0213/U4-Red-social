@@ -4,6 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/fireba
 // Autenticación
 import {
   getAuth,
+  signInWithEmailAndPassword,
   updateProfile,
 } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
 
@@ -18,9 +19,6 @@ import {
   updateDoc,
   getDoc,
 } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -39,15 +37,9 @@ export const auth = getAuth(app);
 // Inicializar Firestore
 export const db = getFirestore();
 
-//Todo: Operaciones CRUD
-//**Crear post (Create) */
-export const createPost = (
-  description,
-  userName,
-  userImage,
-  userEmail,
-  dateTime
-) =>
+// Todo: Operaciones CRUD
+// Crear post (Create)
+export const createPost = (description, userName, userImage, userEmail, dateTime) =>
   addDoc(collection(db, "posts"), {
     description,
     userName,
@@ -55,21 +47,24 @@ export const createPost = (
     userEmail,
     dateTime,
   });
-//**Leer post (Read) */
+
+// Leer post (Read)
 export const onGetPost = (callback) =>
   onSnapshot(collection(db, "posts"), callback);
 
 export const getPost = (id) => getDoc(doc(db, "posts", id));
-//**Actualizar posts (Update) */
+
+// Actualizar posts (Update)
 export const updatePost = (id, newData) =>
   updateDoc(doc(db, "posts", id), newData);
-//**Borrar posts (Delete) */
+
+// Borrar posts (Delete)
 export const deletePost = (id) => deleteDoc(doc(db, "posts", id));
 
 // Foto de perfil
-export { updateProfile };
+export { updateProfile, signInWithEmailAndPassword };
 
-//red-social
+// Red-social
 document.addEventListener("DOMContentLoaded", function () {
   // Seleccionamos todos los botones de responder
   const replyButtons = document.querySelectorAll(".reply-btn");
