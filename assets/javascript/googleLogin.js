@@ -6,7 +6,7 @@ import {
 import { auth } from "./firebase.js";
 import { showMessage } from "./toastMessage.js";
 
-const googleButton = document.querySelector("#google-btn");
+const googleButton = document.querySelector("#loginWithGoogle");
 
 googleButton.addEventListener("click", async () => {
   const provider = new GoogleAuthProvider();
@@ -19,12 +19,9 @@ googleButton.addEventListener("click", async () => {
   try {
     const credentials = await signInWithPopup(auth, provider);
 
-    // Cerrar el modal
-    const signinModal = document.querySelector("#signin-modal");
-    const modal = bootstrap.Modal.getInstance(signinModal);
-    modal.hide();
-
-    showMessage("Sesión iniciada", "success");
+    // showMessage("Sesión iniciada", "success");
+    // Redirigir a red-social.html
+    window.location.href = "./red-social.html";
   } catch (error) {
     console.log(error);
   }
