@@ -55,16 +55,22 @@ header nav ul {
   gap: 15px;
 }
 
-header nav ul li a {
+#links-list a {
   text-decoration: none;
   color: #444;
   font-weight: 500;
   transition: color 0.5s ease, transform 0.5s ease;
 }
 
-header nav ul li a:hover {
+#links-list a:hover {
   color: #d45d79; /* Rosa suave al pasar el ratón */
   transform: scale(1.2);
+}
+
+nav {
+  color: #fff5f7;
+  border-left-color: #fff5f7;
+  border-inline-start-color: #fff5f7;
 }
 
 /* Main section */
