@@ -6,7 +6,6 @@ import "./checkLogin.js";
 // Importamos el archivo de registro
 import "./signupForm.js";
 import "./signinForm.js";
-import "./sigOut.js";
 import "./red-social.js";
 
 // Manejo de autenticación
@@ -62,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(localStorage.getItem("user"));
-  
+
   if (user) {
     const greetingElement = document.getElementById("greeting");
     greetingElement.textContent = `¡Hola, ${user.username}! Bienvenido a TalkSpace.`;
