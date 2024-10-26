@@ -7,6 +7,7 @@ import "./checkLogin.js";
 import "./signupForm.js";
 import "./signinForm.js";
 import "./sigOut.js";
+import "./red-social.js";
 
 // Manejo de autenticación
 onAuthStateChanged(auth, async (user) => {
@@ -59,3 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  
+  if (user) {
+    const greetingElement = document.getElementById("greeting");
+    greetingElement.textContent = `¡Hola, ${user.username}! Bienvenido a TalkSpace.`;
+    greetingElement.style.display = "block"; // Muestra el saludo
+  }
+});
