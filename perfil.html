@@ -19,16 +19,11 @@
       href="./assets/img/logo-talkSpace-removebg-preview.png"
       type="image/x-icon"
     />
-    <link
-      rel="icon"
-      href="./assets/img/logo-talkSpace-removebg-preview.png"
-      type="image/x-icon"
-    />
   </head>
   <body>
     <div class="container container-custom">
       <h2>Crear tu Perfil</h2>
-      <form>
+      <form id="perfilForm">
         <div class="mb-3">
           <label for="avatar" class="form-label">Foto de Perfil</label>
           <input
@@ -40,26 +35,28 @@
           <div class="avatar-preview" id="avatarPreview"></div>
         </div>
 
-        <div class="mb-3s">
+        <div class="mb-3">
           <label for="username" class="form-label">Nombre de Usuario</label>
           <input
             type="text"
             class="form-control"
             id="username"
             placeholder="Escribe tu nombre de usuario"
+            required
           />
         </div>
 
         <div class="mb-3">
           <label for="gender" class="form-label">Género</label>
-          <select class="form-select" id="gender" name="gender">
+          <select class="form-select" id="gender" name="gender" required>
             <option value="" disabled selected>Selecciona tu género</option>
             <option value="male">Masculino</option>
             <option value="female">Femenino</option>
-            <option value="female">No-binario</option>
+            <option value="non-binary">No-binario</option>
             <option value="other">Otro</option>
           </select>
         </div>
+
         <div class="mb-3">
           <label for="bio" class="form-label bi bi-brush">Descripción</label>
           <textarea
@@ -71,14 +68,14 @@
         </div>
 
         <div class="d-flex justify-content-between mt-4">
-          <a href="./red-social.html"
-            ><button type="button" class="btn btn-custom flex-fill me-2">
+          <a href="./red-social.html">
+            <button type="button" class="btn btn-secondary flex-fill me-2">
               Regresar
-            </button></a
-          >
+            </button>
+          </a>
           <button
             type="submit"
-            class="btn btn-custom flex-fill ms-2 guardar-btn"
+            class="btn btn-primary flex-fill ms-2 guardar-btn"
           >
             Guardar
           </button>

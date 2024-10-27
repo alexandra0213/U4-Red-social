@@ -1,4 +1,6 @@
 import { auth, signInWithEmailAndPassword } from "./firebase.js"; 
+import { db } from "./firebase.js"; // Importar Firestore
+import { getDoc, doc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
 import { showMessage } from "./toastMessage.js"; 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,20 +25,32 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, signinEmail, signinPassword);
 
-      // Guardar información del usuario en localStorage si "Recordarme" está activado
-      if (rememberMe) {
-        localStorage.setItem("user", JSON.stringify({
+      // Obtener la información del perfil del usuario desde Firestore
+      const userProfile = await getDoc(doc(db, "users", userCredential.user.uid));
+      
+      if (userProfile.exists()) {
+        // Guardar información del usuario y perfil en localStorage
+        const userData = {
           email: userCredential.user.email,
-        }));
+          username: userProfile.data().username, // Asumiendo que hay un campo 'username' en Firestore
+          gender: userProfile.data().gender, // Y otros campos como género
+          bio: userProfile.data().bio,
+        };
+
+        if (rememberMe) {
+          localStorage.setItem("user", JSON.stringify(userData));
+        } else {
+          localStorage.removeItem("user"); // Limpiar datos si no está marcado
+        }
+
+        // Redirigir a red-social.html
+        window.location.href = 'red-social.html';
+
+        // Mostrar mensaje de éxito
+        showMessage("Sesión iniciada con éxito", "success");
       } else {
-        localStorage.removeItem("user"); // Limpiar datos si no está marcado
+        showMessage("Perfil no encontrado", "error");
       }
-
-      // Redirigir a red-social.html
-      window.location.href = 'red-social.html';
-
-      // Mostrar mensaje de éxito
-      showMessage("Sesión iniciada con éxito", "success");
     } catch (error) {
       console.log(error);
       if (error.code === "auth/wrong-password") {

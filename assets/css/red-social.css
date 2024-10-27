@@ -18,6 +18,21 @@ body {
   overflow-x: hidden;
 }
 
+.nav-link {
+  color: #000; /* Cambia a tu color deseado (por ejemplo, negro) */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: color 0.3s; /* Transición suave para el color */
+}
+
+.nav-link:hover {
+  color: #000000; /* Cambia a un color diferente al pasar el cursor (puedes personalizarlo) */
+  text-decoration: none; /* Asegúrate de que no haya subrayado al pasar el cursor */
+}
+
+/* Para asegurar que no haya un color predeterminado */
+a {
+  color: inherit; /* Mantiene el color del texto de su elemento padre */
+}
 button {
   cursor: pointer;
   border-radius: 20px;

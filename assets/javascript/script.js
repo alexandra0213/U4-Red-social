@@ -8,6 +8,7 @@ import "./signupForm.js";
 import "./signinForm.js";
 import "./sigOut.js";
 
+
 // Manejo de autenticación
 onAuthStateChanged(auth, async (user) => {
   console.log(user);
@@ -44,13 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loginSection").classList.remove("d-none");
   });
 
-  // Mostrar opciones de inicio de sesión con otros servicios
   document.getElementById("showLoginWith").addEventListener("click", (e) => {
     e.preventDefault();
+    console.log("Show login with clicked!"); // Add this line
     document.getElementById("loginSection").classList.add("d-none");
     document.getElementById("loginwith").classList.remove("d-none");
   });
-
+  
   // Regresar al inicio de sesión desde las opciones de inicio de sesión
   document.getElementById("backToLogin").addEventListener("click", (e) => {
     e.preventDefault();
@@ -58,4 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loginSection").classList.remove("d-none");
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (user) {
+    const greetingElement = document.getElementById("user-greeting");
+    greetingElement.textContent = `¡Hola, ${user.username}! Bienvenido a TalkSpace.`;
+  }
+});
+
+
 
