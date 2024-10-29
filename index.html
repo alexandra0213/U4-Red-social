@@ -31,12 +31,18 @@
       <form>
         <div class="mb-3">
           <label for="avatar" class="form-label">Foto de Perfil</label>
-          <input
-            class="form-control"
-            type="file"
-            id="avatar"
-            accept="image/*"
-          />
+          <div class="custom-file-upload">
+            <label for="avatar" class="btn btn-custom2"
+              >Seleccionar archivo</label
+            >
+            <input
+              class="form-control"
+              type="file"
+              id="avatar"
+              accept="image/*"
+              hidden
+            />
+          </div>
           <div class="avatar-preview" id="avatarPreview"></div>
         </div>
 
