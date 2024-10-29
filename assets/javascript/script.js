@@ -6,11 +6,12 @@ import "./checkLogin.js";
 // Importamos el archivo de registro
 import "./signupForm.js";
 import "./signinForm.js";
-import "./red-social.js";
+import { checkLogin } from "./checkLogin.js";
 
 // Manejo de autenticación
 onAuthStateChanged(auth, async (user) => {
   console.log(user);
+  // checkLogin(user);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -57,14 +58,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loginwith").classList.add("d-none");
     document.getElementById("loginSection").classList.remove("d-none");
   });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const user = JSON.parse(localStorage.getItem("user"));
-
-  if (user) {
-    const greetingElement = document.getElementById("greeting");
-    greetingElement.textContent = `¡Hola, ${user.username}! Bienvenido a TalkSpace.`;
-    greetingElement.style.display = "block"; // Muestra el saludo
-  }
 });
