@@ -21,7 +21,6 @@ button {
   border-radius: 20px;
 }
 
-/* Estilos para el header */
 header {
   background: linear-gradient(to right, #ffe4eb, #fff5f7);
   padding: 15px;
@@ -43,7 +42,6 @@ header .logo h1 {
   animation: bounce 1.5s infinite alternate;
 }
 
-/* Estilos para el nav */
 nav {
   list-style: none;
   display: flex;
@@ -72,15 +70,13 @@ header nav ul li {
   transform: scale(1.2);
 }
 
-/* Main content settings to push footer down */
 .main-content {
-  flex: 1; /* Para que ocupe el espacio restante */
   display: flex;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 40px;
   width: 100%;
   max-width: 1200px;
+  flex-grow: 1;
+  margin: 20px auto;
 }
 
 .sidebar {
@@ -210,10 +206,10 @@ footer {
   border-top: 1px solid #ddd;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1.5s ease;
-  margin-top: auto; /* Para empujar el footer al final */
+  margin-top: 100px;
+  border-radius: 15px;
 }
 
-/* Estilos para los elementos ul y li */
 ul {
   list-style: none;
   display: flex;

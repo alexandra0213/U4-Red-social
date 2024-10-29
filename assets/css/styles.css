@@ -49,11 +49,10 @@ body {
 #showLoginWith {
   border: none;
   background: none;
-  color: #d52494; /* Cambia el color según sea necesario */
-  text-decoration: underline; /* Para que se vea como un enlace */
+  color: #d52494;
+  text-decoration: underline;
   cursor: pointer;
 }
-
 
 @media (max-width: 780px) {
   body {
