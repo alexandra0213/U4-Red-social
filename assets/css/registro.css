@@ -41,3 +41,62 @@ body {
 .chiaki {
   height: 150px;
 }
+
+@media (max-width: 780px) {
+  body {
+    background-size: cover;
+    padding: 25px;
+  }
+
+  .principal-container,
+  .recuperar-contrasena-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn-rosa {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    background-size: cover;
+    padding: 20px;
+  }
+
+  .principal-container,
+  .recuperar-contrasena-container {
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .btn-rosa {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

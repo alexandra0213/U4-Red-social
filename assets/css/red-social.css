@@ -30,15 +30,15 @@ header {
     #ffe4eb,
     #fff5f7
   ); /* Degradado suave en el header */
-  padding: 15px;
+  padding: 60px;
   width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 18px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   animation: slideInDown 1s ease;
 }
 
@@ -81,7 +81,7 @@ header nav ul li a:hover {
   padding: 15px;
   border-radius: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-right: 20px;
+  margin-right: 18px;
   animation: slideInLeft 1.5s ease;
 }
 
@@ -128,14 +128,14 @@ header nav ul li a:hover {
   ); /* Degradado sutil para las publicaciones */
   padding: 15px;
   border-radius: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
   border: 2px solid #d45d79; /* Bordes suaves */
 }
 
 .feed .post:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
 .feed .post h3 {
@@ -196,8 +196,8 @@ button::before {
 
 button:hover {
   background-color: #ffb3c1; /* Un rosa más claro al pasar el ratón */
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(255, 146, 176, 0.7);
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(255, 146, 176, 0.7);
 }
 
 /* Footer */

@@ -129,7 +129,7 @@ form {
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 35px;
   }
 
   .avatar-preview {
@@ -148,6 +148,16 @@ form {
   }
   .flex-fill {
     flex: 1;
+  }
+
+  .btn-custom2 {
+    width: 100%;
+    border-radius: 8px;
+    max-width: 235px;
+    margin: 0 auto;
+    padding: 5px 30px;
+    border-radius: 10px;
+    font-size: 17px;
   }
 }
 
@@ -180,5 +190,15 @@ form {
     padding: 15px 20px;
     border-radius: 10px;
     font-size: 17px;
+  }
+
+  .btn-custom2 {
+    width: 100%;
+    border-radius: 8px;
+    max-width: 140px;
+    margin: 0 auto;
+    padding: 1px 20px;
+    border-radius: 10px;
+    font-size: 16px;
   }
 }

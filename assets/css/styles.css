@@ -40,7 +40,7 @@ body {
 }
 
 .recuperar-contrasena-container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 15px;
   width: 100%;
@@ -53,55 +53,4 @@ body {
   color: #d52494;
   text-decoration: underline;
   cursor: pointer;
-}
-
-@media (max-width: 780px) {
-  body {
-    background-size: cover;
-    padding: 20px;
-  }
-
-  .principal-container,
-  .recuperar-contrasena-container {
-    max-width: 90%;
-    padding: 15px;
-    box-shadow: 0 3px 15px rgba(182, 9, 110, 0.7);
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  .btn-rosa {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 320px) {
-  body {
-    background-size: cover;
-    padding: 20px;
-  }
-
-  .principal-container,
-  .recuperar-contrasena-container {
-    max-width: 90%;
-    padding: 20px;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-size: 1rem;
-  }
-
-  .btn-rosa {
-    width: 100%;
-    padding: 10px;
-    font-size: 0.9rem;
-  }
 }
