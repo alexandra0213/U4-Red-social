@@ -12,6 +12,7 @@ body {
   font-family: "Paytone One", sans-serif;
   color: #ff82b0;
 }
+
 .principal-container {
   background-color: white;
   padding: 20px;
@@ -54,7 +55,6 @@ body {
   cursor: pointer;
 }
 
-
 @media (max-width: 780px) {
   body {
     background-size: cover;
@@ -73,7 +73,6 @@ body {
   h3 {
     font-size: 1.2rem;
   }
-
   .btn-rosa {
     width: 100%;
     padding: 12px;
