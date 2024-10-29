@@ -11,7 +11,7 @@ import { checkLogin } from "./checkLogin.js";
 // Manejo de autenticación
 onAuthStateChanged(auth, async (user) => {
   console.log(user);
-  // checkLogin(user);
+  checkLogin(user);
 });
 
 document.addEventListener("DOMContentLoaded", () => {

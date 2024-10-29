@@ -8,8 +8,9 @@ export const checkLogin = (user) => {
   if (user) {
     LoggedOut.forEach((element) => (element.style.display = "none"));
 
-    // Cargamos las tareas
+    // Cargamos los posts
     setupPost(user);
+    localStorage.setItem("user", JSON.stringify(user));
   } else {
     LoggedOut.forEach((element) => (element.style.display = "block"));
   }

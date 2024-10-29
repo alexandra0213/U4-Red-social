@@ -1,6 +1,7 @@
 // Importamos la app
 import { auth } from "./firebase.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+
 import { checkLogin } from "./checkLogin.js";
 import { setupPost } from "./setupTasks.js";
 
@@ -12,6 +13,7 @@ onAuthStateChanged(auth, async (user) => {
 document.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(localStorage.getItem("user"));
   console.log("Red social js");
+  setupPost.user;
 
   if (user && user.username) {
     const greetingElement = document.getElementById("greeting");
