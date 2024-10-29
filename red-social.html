@@ -26,6 +26,8 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/css/red-social.css" />
+    <script type="module" src="./assets/javascript/red-social.js"></script>
+    <script type="module" src="./assets/javascript/checkLogin.js"></script>
     <script type="module" src="./assets/javascript/setupTasks.js"></script>
     <script type="module" src="./assets/javascript/firebase.js"></script>
     <script type="module" src="./assets/javascript/like.js"></script>
@@ -46,7 +48,7 @@
               <a class="nav-link" id="logout" href="#">Cerrar sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link bi bi-person-circle" href="./perfil.html"
+              <a class="nav-link bi bi-person-circle" href="./index.html"
                 >Perfil</a
               >
             </li>
@@ -68,8 +70,8 @@
         </aside>
 
         <div class="feed col-md-9 neon-border">
-          <div class="post new-post mb-4">
-            <h3>Nuevo Post</h3>
+          <div class="post new-post mb-4" id="post-form">
+            <h3 id="post-title">Nuevo Post</h3>
             <textarea
               id="description"
               placeholder="Escribe algo..."
@@ -120,7 +122,8 @@
             <span id="likes-count">0 Likes</span>
           </div>
         </div>
-      <footer class="text-center py-4 mt-3">
+      </section>
+      <footer class="text-center py-4">
         <p>&copy; 2024 TalkSpace - Diseñado por Las error 404.</p>
       </footer>
     </main>
