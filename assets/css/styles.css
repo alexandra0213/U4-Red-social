@@ -11,6 +11,8 @@ body {
   background-size: cover;
   font-family: "Paytone One", sans-serif;
   color: #ff82b0;
+  overflow: hidden;
+
 }
 
 .principal-container {
