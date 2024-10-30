@@ -16,7 +16,6 @@ let editId = "";
 
 export const setupPost = (user) => {
   console.log(user);
-  console.log(user.displayName);
 
   //CREATE
   postForm.addEventListener("submit", async (e) => {
