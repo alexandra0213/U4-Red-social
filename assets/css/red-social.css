@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-#greeting{
+#greeting {
   background-color: #f4819c;
   font-family: "Rubik", sans-serif;
 }
@@ -60,7 +60,6 @@ header nav ul {
 header nav ul li {
   margin: 0;
 }
-
 
 #links-list a {
   text-decoration: none;
@@ -138,7 +137,7 @@ header nav ul li {
 
 .feed .post:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 .feed .post h3 {
@@ -297,4 +296,103 @@ li {
 
 .like-button.liked {
   background-color: #e06c6c;
+}
+
+@media (max-width: 780px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  header .logo h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .feed {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .feed .post {
+    margin-bottom: 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 8px 12px;
+  }
+
+  .new-post {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+    padding: 5px;
+    margin: 10px auto;
+  }
+
+  header .logo h1 {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    gap: 10px;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .feed {
+    padding: 10px;
+  }
+
+  .feed .post h3 {
+    font-size: 1rem;
+  }
+
+  .feed .post p {
+    font-size: 0.8rem;
+  }
+
+  .new-post {
+    padding: 10px;
+  }
+
+  textarea {
+    padding: 8px;
+  }
+
+  button {
+    padding: 6px 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
