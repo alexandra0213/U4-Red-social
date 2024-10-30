@@ -15,13 +15,35 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 #greeting {
   background-color: #f4819c;
   font-family: "Rubik", sans-serif;
 }
+
 button {
   cursor: pointer;
   border-radius: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  position: relative;
+}
+
+ul ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+li:hover > ul {
+  display: block;
 }
 
 header {
@@ -71,6 +93,12 @@ header nav ul li {
 #links-list a:hover {
   color: #d45d79;
   transform: scale(1.2);
+}
+
+#links-list a.selected {
+  background-color: #f8c8d2; /* Color rosado pastel */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 15px; /* Bordes redondeados */
 }
 
 .main-content {
@@ -167,14 +195,13 @@ textarea {
 }
 
 button {
-  background-color: #d45d79;
+  background-color: #f4819c;
   color: white;
   border: none;
   padding: 10px 15px;
   border-radius: 20px;
   font-weight: 500;
-  transition: background-color 0.4s ease, transform 0.4s ease,
-    box-shadow 0.4s ease;
+  transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
   overflow: hidden;
 }
@@ -400,3 +427,4 @@ li {
     font-size: 0.8rem;
   }
 }
+

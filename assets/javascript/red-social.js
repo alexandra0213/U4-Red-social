@@ -22,3 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const links = document.querySelectorAll('#links-list a');
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    links.forEach(item => item.classList.remove('selected'));
+    link.classList.add('selected');
+  });
+});
