@@ -93,7 +93,6 @@ export const setupPost = (user) => {
           }
         </header>
         <hr />
-        <h4>${data.title}</h4>
         <p>${data.description}</p>
       </article>
       `;

@@ -9,7 +9,7 @@ signOutButton.addEventListener("click", async () => {
     await signOut(auth);
     showMessage("Sesión cerrada", "success");
     // Redirigir a formulario.html
-    window.location.href = "./formulario.html";
+    window.location.href = "./index.html";
   } catch (error) {
     console.log(error);
   }

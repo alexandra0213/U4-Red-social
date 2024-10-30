@@ -101,34 +101,38 @@ Si tienes alguna pregunta o encuentras problemas, contáctanos a través de [sop
 
 ## 1. Pantalla de Registro
 Descripción: Esta pantalla permite a los nuevos usuarios crear una cuenta proporcionando su nombre, correo electrónico y contraseña.  
-![Boceto Registro](ruta/a/tu/boceto_registro.png)
-
+![Boceto Registro](./assets/img/registrp.png)
 ## 2. Pantalla de Inicio de Sesión
 Descripción: Aquí los usuarios ingresan sus credenciales para acceder a su perfil. Incluye un enlace para recuperar la contraseña.  
-![Boceto Inicio de Sesión](ruta/a/tu/boceto_inicio_sesion.png)
+![Boceto Inicio de Sesión](./assets/img/iniciar%20sesion%20con.png)
 
 ## 3. Pantalla Principal (Feed)
 Descripción: Muestra las publicaciones recientes de los usuarios que sigues, con opciones para dar "me gusta" y comentar.  
-![Boceto Pantalla Principal](ruta/a/tu/boceto_pantalla_principal.png)
+![Boceto Pantalla Principal](./assets/img/inicio.png)
 
 ## 4. Perfil de Usuario
 Descripción: Esta sección permite a los usuarios ver y editar su perfil, incluyendo su foto, biografía y publicaciones realizadas.  
-![Boceto Perfil de Usuario](ruta/a/tu/boceto_perfil_usuario.png)
+![Boceto Perfil de Usuario](./assets/img/perfil.png)
 
 ## 5. Crear Nueva Publicación
 Descripción: Interfaz donde los usuarios pueden crear una nueva publicación, incluyendo opciones para añadir texto, imágenes y enlaces.  
-![Boceto Crear Nueva Publicación](ruta/a/tu/boceto_crear_publicacion.png)
+![Boceto Crear Nueva Publicación](./assets/img/post.png)
 
-## 6. Pantalla de Notificaciones
-Descripción: Muestra las notificaciones de interacciones recientes, como nuevos seguidores y comentarios en las publicaciones.  
-![Boceto Notificaciones](ruta/a/tu/boceto_notificaciones.png)
 
-## 7. Configuración del Usuario
-Descripción: Permite a los usuarios gestionar su cuenta, como cambiar la contraseña, ajustar las preferencias de notificación y cerrar sesión.  
-![Boceto Configuración](ruta/a/tu/boceto_configuracion.png)
+# Conceptos Base: 🦋
 
----
+Descripción: Aquí mostraremos nuestra guía base para la estructuración visual de nuestra app.
 
+
+
+- Logo de la app: ![one](./assets/img/logo-talkSpace-removebg-preview.png)
+- Paleta de colores: ![two](./assets/img/paleta%20de%20colores%20-%20copia.jpg)
+- Ejemplo de interfaz: 
+![boceto1](./assets/img/bocetocinco.jpeg)
+![boceto2](./assets/img/bocetouno.jpeg)
+![boceto3](./assets/img/bocetodos.jpeg)
+![boceto4](./assets/img/bocetotres.jpeg)
+![boceto5](./assets/img/bocetocuatro.jpeg)
 # Problemática del Usuario 🤔
 **Dificultades para Participar en Debates**
 

@@ -6,6 +6,8 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   updateProfile,
+  signInWithPopup,
+  GithubAuthProvider
 } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
 
 // Firestore
@@ -32,8 +34,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// Inicializar Autenticacion de Firebase y obtener una referencia del servicio
+
+// Inicializar Autenticación de Firebase y obtener una referencia del servicio
 export const auth = getAuth(app);
+
 // Inicializar Firestore
 export const db = getFirestore();
 
@@ -64,6 +68,28 @@ export const deletePost = (id) => deleteDoc(doc(db, "posts", id));
 // Foto de perfil
 export { updateProfile, signInWithEmailAndPassword };
 
+// Función para iniciar sesión con GitHub
+export const loginWithGitHub = () => {
+  const provider = new GithubAuthProvider();
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const user = result.user;
+
+      // Redirigir a red-social.html
+      window.location.href = 'red-social.html';
+    })
+    .catch((error) => {
+      if (error.code === 'auth/account-exists-with-different-credential') {
+        // Manejo de error si la cuenta ya existe con un proveedor diferente
+        const email = error.email; // El email asociado a la cuenta
+        console.error("La cuenta ya existe con un proveedor diferente. Intenta iniciar sesión con otro método.");
+        // Aquí puedes mostrar un mensaje al usuario o redirigirlo.
+      } else {
+        console.error("Error de autenticación con GitHub:", error);
+      }
+    });
+};
+
 // Red-social
 document.addEventListener("DOMContentLoaded", function () {
   // Seleccionamos todos los botones de responder
@@ -78,4 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         replyForm.style.display === "none" ? "block" : "none";
     });
   });
+
+  // Evento para el botón de login con GitHub
+  document.getElementById('loginWithGit').addEventListener('click', loginWithGitHub);
 });

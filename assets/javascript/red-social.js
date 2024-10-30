@@ -7,6 +7,7 @@ import { setupPost } from "./setupTasks.js";
 
 onAuthStateChanged(auth, async (user) => {
   console.log(user);
+  checkLogin(user);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,3 +21,4 @@ document.addEventListener("DOMContentLoaded", () => {
     greetingElement.style.display = "block"; // Muestra el saludo
   }
 });
+
