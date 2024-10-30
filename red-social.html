@@ -27,10 +27,6 @@
     />
     <link rel="stylesheet" href="./assets/css/red-social.css" />
     <script type="module" src="./assets/javascript/red-social.js"></script>
-    <script type="module" src="./assets/javascript/checkLogin.js"></script>
-    <script type="module" src="./assets/javascript/setupTasks.js"></script>
-    <script type="module" src="./assets/javascript/firebase.js"></script>
-    <script type="module" src="./assets/javascript/like.js"></script>
     <script type="module" src="./assets/javascript/sigOut.js"></script>
     <script type="module" src="./assets/javascript/mimuro.js"></script>
   </head>
@@ -42,7 +38,7 @@
         <div class="logo">
           <h1>Un lugar seguro...</h1>
         </div>
-        <nav>
+        <nav id="navbar">
           <ul class="nav" id="links-list">
             <li class="nav-item"><a class="nav-link" href="./red-social.html">Inicio</a></li>
             <li class="nav-item logged-in">
@@ -87,7 +83,7 @@
             >
               Publicar
             </button>
-          </div>
+          </form>
           <!--No borrar nada, solo estilarlo-->
           <div id="post-container" class="mt-3">
             <article class="post-article border border-2 rounded-2 p-3">
@@ -95,6 +91,15 @@
               <div class="post">
                 <button id="like-button" class="like-button">Like</button>
                 <span id="likes-count">0 Likes</span>
+
+                <button class="btn btn-secondary reply-btn">Responder</button>
+                <div class="reply-form" style="display: none">
+                  <textarea
+                    placeholder="Escribe tu respuesta..."
+                    class="form-control mb-2"
+                  ></textarea>
+                  <button class="btn btn-primary">Publicar Respuesta</button>
+                </div>
               </div>
             </article>
           </div>
@@ -143,5 +148,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
+    
   </body>
 </html>

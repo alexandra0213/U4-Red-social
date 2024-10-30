@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 105vh;
   margin: 0;
   background: url(https://i.pinimg.com/originals/1d/32/cd/1d32cdd59cc31aa291ba4f46e7a854ed.gif);
   background-repeat: no-repeat;
@@ -14,12 +14,23 @@ body {
 }
 .principal-container {
   background-color: white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 15px;
   width: 100%;
   max-width: 400px;
   box-shadow: 0 4px 20px rgba(182, 9, 110, 0.885);
 }
+
+.position-relative {
+  padding: 15px;
+  position: absolute;
+  transform: scale(0.6);
+  margin: -15px auto 100px;
+  right: 45px;
+  margin-bottom: 0px;
+  margin: -15px auto 70px;
+}
+
 .text-decoration-none {
   text-decoration: underline;
   color: #ffacea;
