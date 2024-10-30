@@ -86,8 +86,8 @@ export const setupPost = (user) => {
           ${
             user.email === data.userEmail
               ? `<div>
-            <button class="btn btn-warning btn-editar" data-id="${doc.id}"><i class="bi bi-pencil-fill"></i></button>
-            <button class="btn btn-danger btn-eliminar" data-id="${doc.id}"><i class="bi bi-trash"></i></button>
+            <button class="btn btn-editar btn-editar" data-id="${doc.id}"><i class="bi bi-pencil-fill"></i></button>
+            <button class="btn btn-borrar btn-eliminar" data-id="${doc.id}"><i class="bi bi-trash"></i></button>
           </div>`
               : `<div></div>`
           }
