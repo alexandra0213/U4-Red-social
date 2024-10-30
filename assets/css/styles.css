@@ -88,14 +88,14 @@ body {
 
   .principal-container,
   .recuperar-contrasena-container {
-    max-width: 90%;
+    max-width: 100%;
     padding: 20px;
   }
 
   h1,
   h2,
   h3 {
-    font-size: 1rem;
+    font-size: 4rem;
   }
 
   .btn-rosa {
