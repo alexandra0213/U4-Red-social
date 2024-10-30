@@ -15,7 +15,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+#greeting{
+  background-color: #f4819c;
+  font-family: "Rubik", sans-serif;
+}
 button {
   cursor: pointer;
   border-radius: 20px;
@@ -57,6 +60,7 @@ header nav ul {
 header nav ul li {
   margin: 0;
 }
+
 
 #links-list a {
   text-decoration: none;

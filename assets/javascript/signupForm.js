@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const signupEmail = document.querySelector("#registroEmail").value.trim();
     const signupUsername = document.querySelector("#username").value.trim();
     const signupPassword = document.querySelector("#registroPassword").value;
-    const signupPasswordRepeat = document.querySelector("#registroPasswordRepeat").value;
+    const signupPasswordRepeat = document.querySelector(
+      "#registroPasswordRepeat"
+    ).value;
 
     if (signupPassword !== signupPasswordRepeat) {
       showMessage("Las contraseñas no coinciden", "error");
@@ -19,11 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const userCredentials = await createUserWithEmailAndPassword(auth, signupEmail, signupPassword);
-      await updateProfile(userCredentials.user, { displayName: signupUsername });
+      const userCredentials = await createUserWithEmailAndPassword(
+        auth,
+        signupEmail,
+        signupPassword
+      );
+      const user = await updateProfile(userCredentials.user, {
+        displayName: signupUsername,
+      });
       signupForm.reset();
-      localStorage.setItem('user', JSON.stringify({ email: signupEmail, username: signupUsername }));
-      window.location.href = 'red-social.html';
+      localStorage.setItem("user", JSON.stringify(user));
+      window.location.href = "red-social.html";
       showMessage("Usuario registrado con éxito", "success");
     } catch (error) {
       console.error("Error al registrar el usuario:", error);
