@@ -22,6 +22,7 @@ export const setupPost = (user) => {
   postForm.addEventListener("submit", async (e) => {
     // Prevenir que la página se recargue
     e.preventDefault();
+    console.log("datos enviados");
 
     // Obtener los datos del formulario
     const description = postForm["description"].value;
