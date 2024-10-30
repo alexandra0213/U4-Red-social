@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Paytone+One&family=Playwrite+PE:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 body {
   font-family: "Paytone One", sans-serif;
-  background-color:
-  #ffe4eb;
+  background-color: #ffe4eb;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -21,7 +20,6 @@ body {
   text-align: center;
   animation: fadeIn 1.5s ease-in-out;
 }
-
 
 h2 {
   color: #d149a1;
@@ -51,7 +49,6 @@ label {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
- 
 }
 a {
   text-decoration: none;
