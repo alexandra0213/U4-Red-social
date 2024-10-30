@@ -20,6 +20,63 @@ body {
   background-color: #f4819c;
   font-family: "Rubik", sans-serif;
 }
+#postsContainer {
+  position: fixed;
+  top: 0;
+  left: 9%; 
+  width: 25%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 999;
+  display: none;
+  overflow-y: auto;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+#postsContainer .post {
+  background-color: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#postsContainer h5 {
+  margin: 0 0 8px;
+  color: #333;
+}
+
+#postsContainer p {
+  margin: 0 0 4px;
+  color: #666;
+}
+
+#postsContainer span {
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+#closePosts {
+  margin-bottom: 15px;
+}
+
+#closePosts:hover {
+  background-color: #dc3545;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.hide {
+  display: none;
+}
+
+
+.hide {
+  display: none;
+}
 
 button {
   cursor: pointer;
