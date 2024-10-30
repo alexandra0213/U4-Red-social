@@ -7,6 +7,8 @@ export const checkLogin = (user) => {
   console.log(user);
   if (user) {
     LoggedOut.forEach((element) => (element.style.display = "none"));
+    // Cargamos los posts
+    setupPost(user);
     localStorage.setItem("user", JSON.stringify(user));
   } else {
     LoggedOut.forEach((element) => (element.style.display = "block"));

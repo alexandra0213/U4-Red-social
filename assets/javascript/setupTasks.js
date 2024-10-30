@@ -56,7 +56,7 @@ export const setupPost = (user) => {
         // Modificamos lo que muestra el formulario
         document.getElementById("post-title").innerHTML =
           "Añadir un nuevo post";
-        postForm["btn-agregar"].value = "Publicar";
+        document.getElementById("btn-agregar").innerHTML = "Publicar";
       }
 
       // Limpiar el formulario
@@ -78,7 +78,7 @@ export const setupPost = (user) => {
       <article class="post-container border border-2 rounded-2 p-3 my-3">
         <header class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center gap-3">
-            <img class="task-profile-picture rounded-circle" src="${
+            <img class="post-profile-picture rounded-circle" src="${
               data.userImage ? data.userImage : "./assets/img/default.pfp.png"
             }" alt="${data.userName}" />
             <p class="m-0">${data.userName}</p>
@@ -88,13 +88,12 @@ export const setupPost = (user) => {
             user.email === data.userEmail
               ? `<div>
             <button class="btn btn-warning btn-editar" data-id="${doc.id}"><i class="bi bi-pencil-fill"></i></button>
-            <button class="btn btn-danger btn-eliminar" data-id="${doc.id}"><i class="bi bi-trash3-fill"></i></button>
+            <button class="btn btn-danger btn-eliminar" data-id="${doc.id}"><i class="bi bi-trash"></i></button>
           </div>`
               : `<div></div>`
           }
         </header>
         <hr />
-        <h4>${data.title}</h4>
         <p>${data.description}</p>
       </article>
       `;
@@ -115,13 +114,13 @@ export const setupPost = (user) => {
         const post = doc.data();
 
         // Llenamos el formulario con los datos
-        postForm["description"].value = task.description;
+        postForm["description"].value = post.description;
         // Actualizamos el estado de edición y el id edición
         editStatus = true;
         editId = doc.id;
         // Cambiamos lo que muestra el formulario
         document.getElementById("post-title").innerHTML = "Editar post";
-        postForm["btn-agregar"].value = "Guardar cambios";
+        document.getElementById("btn-agregar").innerHTML = "Guardar cambios";
       });
     });
     // !Delete

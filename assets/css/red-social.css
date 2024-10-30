@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-#greeting{
+#greeting {
   background-color: #f4819c;
   font-family: "Rubik", sans-serif;
 }
@@ -60,7 +60,6 @@ header nav ul {
 header nav ul li {
   margin: 0;
 }
-
 
 #links-list a {
   text-decoration: none;
@@ -285,6 +284,10 @@ li {
   100% {
     filter: hue-rotate(360deg);
   }
+}
+
+.post-profile-picture {
+  width: 50px;
 }
 
 .like-button {

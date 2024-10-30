@@ -27,11 +27,6 @@
     />
     <link rel="stylesheet" href="./assets/css/red-social.css" />
     <script type="module" src="./assets/javascript/red-social.js"></script>
-    <script type="module" src="./assets/javascript/checkLogin.js"></script>
-    <script type="module" src="./assets/javascript/setupTasks.js"></script>
-    <script type="module" src="./assets/javascript/firebase.js"></script>
-    <script type="module" src="./assets/javascript/like.js"></script>
-    <script type="module" src="./assets/javascript/sigOut.js"></script>
   </head>
   <body>
     <main class="container">
@@ -94,6 +89,15 @@
               <div class="post">
                 <button id="like-button" class="like-button">Like</button>
                 <span id="likes-count">0 Likes</span>
+
+                <button class="btn btn-secondary reply-btn">Responder</button>
+                <div class="reply-form" style="display: none">
+                  <textarea
+                    placeholder="Escribe tu respuesta..."
+                    class="form-control mb-2"
+                  ></textarea>
+                  <button class="btn btn-primary">Publicar Respuesta</button>
+                </div>
               </div>
             </article>
           </div>
