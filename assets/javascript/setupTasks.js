@@ -54,8 +54,7 @@ export const setupPost = (user) => {
         editId = "";
 
         // Modificamos lo que muestra el formulario
-        document.getElementById("post-title").innerHTML =
-          "Añadir un nuevo post";
+        document.getElementById("post-title").innerHTML = "Nuevo post";
         document.getElementById("btn-agregar").innerHTML = "Publicar";
       }
 
