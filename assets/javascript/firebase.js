@@ -16,6 +16,7 @@ import {
   collection,
   doc,
   addDoc,
+  setDoc,
   onSnapshot,
   deleteDoc,
   updateDoc,
@@ -40,6 +41,11 @@ export const auth = getAuth(app);
 
 // Inicializar Firestore
 export const db = getFirestore();
+
+// Función para guardar datos del usuario
+export const saveUserData = (userId, userData) => {
+  return setDoc(doc(db, "users", userId), userData, { merge: true });
+};
 
 // Todo: Operaciones CRUD
 // Crear post (Create)
@@ -75,15 +81,22 @@ export const loginWithGitHub = () => {
     .then((result) => {
       const user = result.user;
 
-      // Redirigir a red-social.html
-      window.location.href = 'red-social.html';
+      const userData = {
+        email: user.email,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        gender: '',
+        bio: ''
+      };
+
+      saveUserData(user.uid, userData).then(() => {
+        window.location.href = 'red-social.html';
+      });
     })
     .catch((error) => {
       if (error.code === 'auth/account-exists-with-different-credential') {
-        // Manejo de error si la cuenta ya existe con un proveedor diferente
-        const email = error.email; // El email asociado a la cuenta
+        const email = error.email;
         console.error("La cuenta ya existe con un proveedor diferente. Intenta iniciar sesión con otro método.");
-        // Aquí puedes mostrar un mensaje al usuario o redirigirlo.
       } else {
         console.error("Error de autenticación con GitHub:", error);
       }
@@ -92,19 +105,15 @@ export const loginWithGitHub = () => {
 
 // Red-social
 document.addEventListener("DOMContentLoaded", function () {
-  // Seleccionamos todos los botones de responder
   const replyButtons = document.querySelectorAll(".reply-btn");
 
-  // Agregamos un evento de clic a cada botón de respuesta
   replyButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      // Mostramos el área de respuesta asociada
-      const replyForm = button.nextElementSibling; // Se asume que el div de respuesta sigue al botón
+      const replyForm = button.nextElementSibling;
       replyForm.style.display =
         replyForm.style.display === "none" ? "block" : "none";
     });
   });
 
-  // Evento para el botón de login con GitHub
   document.getElementById('loginWithGit').addEventListener('click', loginWithGitHub);
 });
