@@ -74,8 +74,8 @@ export const setupPost = (user) => {
       const data = doc.data();
 
       postsHtml += `
-      <article class="post-container border border-2 rounded-2 p-3 my-3">
-        <header class="d-flex justify-content-between align-items-center">
+      <article class="post-container post mb-3">
+        <header class="">
           <div class="d-flex align-items-center gap-3">
             <img class="post-profile-picture rounded-circle" src="${
               data.userImage ? data.userImage : "./assets/img/default.pfp.png"
@@ -86,14 +86,14 @@ export const setupPost = (user) => {
           ${
             user.email === data.userEmail
               ? `<div>
-            <button class="btn btn-editar btn-editar" data-id="${doc.id}"><i class="bi bi-pencil-fill"></i></button>
-            <button class="btn btn-borrar btn-eliminar" data-id="${doc.id}"><i class="bi bi-trash"></i></button>
+            <button class="btn btn-editar btn-editar mx-2" data-id="${doc.id}"><i class="bi bi-pencil-fill"></i></button>
+            <button class="btn btn-borrar btn-eliminar mx-2" data-id="${doc.id}"><i class="bi bi-trash"></i></button>
           </div>`
               : `<div></div>`
           }
         </header>
-        <hr />
-        <p>${data.description}</p>
+        <hr/>
+        <p class="px-2">${data.description}</p>
       </article>
       `;
     });
